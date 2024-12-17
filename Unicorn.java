@@ -1,5 +1,10 @@
 import java.util.*;
 
+/**
+ * Class for buying a Unicorn
+ * @author Adelle.Kang
+ * @version 1.0.0
+ */
 public class Unicorn extends Pet{
     Scanner in = new Scanner(System.in);
     private String power;
@@ -9,6 +14,14 @@ public class Unicorn extends Pet{
     private static int money = 1000;
     private static int pedicure = 500;
 
+    /**
+     * Constructor
+     * @param name
+     * @param age
+     * @param power
+     * @param rainbowPoop
+     * @param hairColor
+     */
     public Unicorn(String name, int age, String power, boolean rainbowPoop, String hairColor){
         super(age);
         this.name = name;
@@ -17,42 +30,75 @@ public class Unicorn extends Pet{
         this.hairColor = hairColor;
     }
 
+    /**
+     * Gets the name
+     * @return name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Sets the name
+     * @param name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
-
+    /**
+     * Gets the powers
+     * @return powers
+     */
     public String[] getPowers() {
         String[] powers = power.split(" ");
         return powers;
-
-
     }
 
+    /**
+     * Sets the power
+     * @param power
+     */
     public void setPower(String power) {
         this.power = power;
     }
 
+    /**
+     * Checks for Rainbow Poop
+     * @return rainbowPoop
+     */
     public boolean isRainbowPoop() {
         return rainbowPoop;
     }
 
+    /**
+     * Set Rainbow Poop
+     * @param rainbowPoop
+     */
     public void setRainbowPoop(boolean rainbowPoop) {
         this.rainbowPoop = rainbowPoop;
     }
 
+    /**
+     * Gets the hairColor
+     * @return hairColor
+     */
     public String getHairColor() {
         return hairColor;
     }
 
+    /**
+     * Sets the hairColor
+     * @param hairColor
+     */
     public void setHairColor(String hairColor) {
         this.hairColor = hairColor;
     }
 
+    /**
+     * Gets the money total with pedicure
+     * @return total money
+     */
     public int getMoney() {
         int total = this.money;
         int pedicureAmount;
@@ -65,7 +111,10 @@ public class Unicorn extends Pet{
 
     }
 
-
+    /**
+     * toString method for all information for Unicorn pet
+     * @return s
+     */
     public String toString(){
         String powerDisplay = "";
         String[] powers = this.getPowers();
